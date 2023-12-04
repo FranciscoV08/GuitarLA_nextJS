@@ -20,6 +20,6 @@ export default function Guitarra({guitarra}) {
 
           </Link>
         </div>
-    </div>
+    </div>  
   )
 }

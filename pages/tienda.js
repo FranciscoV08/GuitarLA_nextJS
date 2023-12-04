@@ -57,19 +57,19 @@ export default function Tienda( {guitarras}) {
 
 // Ventajas de usar este es: No es necesario hacer otro biuld para actualizar la info 
 
-// export async function getServerSideProps(){
+export async function getServerSideProps(){
 
-//   // Realizamos el fetch 
-//   const respuesta = await fetch(`${process.env.API_URL}/guitarras?populate=imagen`);
-//   // Extraemos data y le cambiamos el nombre a Guitarras
-//   // const respuesta = await fetch('http://localhost:1337/api/guitarras?populate=imagen');
-//   const {data: guitarras} = await respuesta.json()
+  // Realizamos el fetch 
+  const respuesta = await fetch(`${process.env.API_URL}/guitarras?populate=imagen`);
+  // Extraemos data y le cambiamos el nombre a Guitarras
+  // const respuesta = await fetch('http://localhost:1337/api/guitarras?populate=imagen');
+  const {data: guitarras} = await respuesta.json()
 
-//   console.log(guitarras)
+  console.log(guitarras)
 
-//   return{
-//     props:{
-//       guitarras
-//     }
-//   }
-// }
+  return{
+    props:{
+      guitarras
+    }
+  }
+}
